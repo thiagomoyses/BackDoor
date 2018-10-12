@@ -8,11 +8,12 @@ print("#   SERVIDOR   #")
 print("################")
 
 
-host = '' 
-port = 7000
-addr = (host, port)
+while 1:
+	host = '' 
+	port = 7000
+	addr = (host, port)
 
-while True:
+
 	serv_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	serv_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) 
 	serv_socket.bind(addr) 
@@ -25,5 +26,4 @@ while True:
 	msg = str(recebe, 'utf-8')
 	retorno = os.system(msg)
 	#print ("mensagem recebida: " + msg)
-	serv_socket.close()
-	pass
+	#serv_socket.close()

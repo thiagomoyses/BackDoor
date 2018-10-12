@@ -1,4 +1,5 @@
 import socket 
+import time
 
 print("################")
 print("#   CLIENTE    #")
@@ -6,7 +7,8 @@ print("################")
 
 ##ip = input('digite o ip de conexao: ') 
 while 1:
-	ip = "192.168.0.100"
+	time.sleep(1)
+	ip = "192.168.0.104"
 	port = 7000
 	addr = ((ip,port))
 	client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
